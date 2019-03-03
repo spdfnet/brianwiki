@@ -1,0 +1,144 @@
+
+
+
+git
+
+ add
+  .
+  $path/$file
+  --all | -A
+
+ blame
+  $path/$file
+   -L $start,$end
+  $hash --
+  -t
+
+ branch
+  --all    | -a
+  --delete | -d
+   --force | -D
+
+ checkout
+  $branch
+   /$tag
+  -- $path
+  --orphan
+
+ clone
+  --branch-name | -b
+  --depth
+  --single-branch
+
+ commit
+  --all | -a
+  --amend
+   --author="$name <$email>"
+   --reset-author
+  --message= | -m
+
+ config
+  --global
+   core.editor
+   user.email
+   user.name
+  --list | -l
+
+ count-objects
+  --verbose | -v
+
+ diff
+  $commit
+  $file
+  --no-index $path1 $path2
+
+ fetch
+  --depth=
+  --dry-run
+  --verbose | -v
+
+ filter-branch
+  --index-filter 'git rm --cached --ignore-unmatch $bigfile' HEAD
+
+ for-each-ref
+  --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+
+ gc
+  --prune=now
+
+ init
+  --bare
+  --quiet | -q
+
+ log
+  -2
+  -- $path/$file
+  --follow
+  --oneline
+  --path | -p
+
+ merge
+  --abort
+  --no-commit
+
+ pull
+  --rebase
+  --unshallow
+
+ push
+  $branch
+   /$tag
+  --delete
+  --force | -f
+  --set-upstream
+
+ rebase
+  --continue
+
+ reflog
+  expire --expire=now --all
+
+ remote
+  add
+   origin
+   upstream
+  set-branches
+
+ reset
+  --hard
+  --soft "HEAD^"
+
+ rev-parse
+  --short HEAD
+
+ revert
+  --no-commit
+
+ rm
+  .
+  $path/$file
+  --force | -f
+  -r
+
+ status
+  -v -v
+  --verbose | -v
+  --short | -s
+  --show-stash
+  --untracked-files | -u
+   =all | all
+
+
+
+ git@$server:$user/$repo.git
+ https://$server/$user/$repo.git
+
+
+
+ -C $path
+ -c
+  http.sslVerify=false
+ --git-dir
+ --work-tree
+
+
